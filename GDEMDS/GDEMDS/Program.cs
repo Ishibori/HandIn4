@@ -13,6 +13,9 @@ namespace GDEMDS
         {
             var jsonDown = new JsonDownloader();
             Console.WriteLine(jsonDown.GetJson("http://userportal.iha.dk/~jrt/i4dab/E14/HandIn4/GFKRE0031_sample.txt"));
+
+            var JSONChar = new JSONCharacteristics();
+            JSONChar.LoadJSON();
         }
     }
 }

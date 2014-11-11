@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class ReadingCharacteristics
+    public class readingCharacteristic
     {
-        public int Id { get; set; }
-        public int SensorId { get; set; }
-        public int ApartmentId { get; set; }
-        public double Value { get; set; }
-        public DateTime TimeStamp { get; set; }
+        public int id { get; set; }
+        public int sensorId { get; set; }
+        public int apartmentId { get; set; }
+        public double value { get; set; }
+        public DateTime timestamp { get; set; }
     }
 }

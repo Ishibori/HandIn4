@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class ApartmentCharacteristics
+    public class appartmentCharacteristic
     {
         public int Id { get; set; }
         public int floor { get; set; }
-        public int No { get; set; }
-        public double Size { get; set; }
+        public int no { get; set; }
+        public double size { get; set; }
     }
 }

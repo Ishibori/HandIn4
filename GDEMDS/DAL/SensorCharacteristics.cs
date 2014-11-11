@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class SensorCharacteristics
+    public class sensorCharacteristic
     {
         public int Id { get; set; }
-        public string Description { get; set; }
-        public string Unit { get; set; }
-        public string ExternalRef { get; set; }
-        public string CalibrationEquation { get; set; }
-        public string CalibrationCoeff { get; set; }
-        public DateTime CalibrationDate { get; set; }
+        public string description { get; set; }
+        public string unit { get; set; }
+        public string externalRef { get; set; }
+        public string calibrationEquation { get; set; }
+        public string calibrationCoeff { get; set; }
+        public DateTime calibrationDate { get; set; }
     }
 }
