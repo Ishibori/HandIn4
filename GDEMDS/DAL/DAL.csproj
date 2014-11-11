@@ -39,12 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApartmentGetModel.cs" />
-    <Compile Include="SensorGetModel.cs" />
-    <Compile Include="ApartmentGetModel.cs" />
-    <Compile Include="MeasurementGetModel.cs" />
-    <Compile Include="SensorGetModel.cs" />
+    <Compile Include="ApartmentCharacteristics.cs" />
+    <Compile Include="ReadingCharacteristics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SensorCharacteristics.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

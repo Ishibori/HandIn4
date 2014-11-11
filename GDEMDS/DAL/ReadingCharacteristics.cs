@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class MeasurementCharacteristics
+    public class ReadingCharacteristics
     {
         public int Id { get; set; }
         public int SensorId { get; set; }
