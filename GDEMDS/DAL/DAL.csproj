@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApartmentGetModel.cs" />
+    <Compile Include="SensorGetModel.cs" />
+    <Compile Include="ApartmentGetModel.cs" />
     <Compile Include="MeasurementGetModel.cs" />
     <Compile Include="SensorGetModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
