@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class ApartmentModel
+    public class ApartmentGetModel
     {
         public int Id { get; set; }
         public int floor { get; set; }
