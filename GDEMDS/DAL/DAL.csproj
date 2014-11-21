@@ -49,6 +49,8 @@
     <Compile Include="ReadingCharacteristics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SensorCharacteristics.cs" />
+    <Compile Include="Timer\ITickTimer.cs" />
+    <Compile Include="Timer\TickTimer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
