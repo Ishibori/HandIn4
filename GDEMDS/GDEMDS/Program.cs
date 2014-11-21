@@ -14,7 +14,7 @@ namespace GDEMDS
         
         static void Main(string[] args)
         {
-            FLTimer = new FileLoaderTimer(5000);
+            FLTimer = new FileLoadTimer(5000);
             FLTimer.TickEvent += new TickTimer(WriteToScreen);
             FLTimer.StartTimer();
             //var jsonDown = new JsonDownloader();
