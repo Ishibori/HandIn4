@@ -21,6 +21,7 @@ namespace DAL
             JsonDownloader jd = new JsonDownloader();
 
             var tmpJSON = serializer.Deserialize<JSONCharacteristics>(new JsonTextReader(new StringReader(jd.GetJson("http://userportal.iha.dk/~jrt/i4dab/E14/HandIn4/GFKSC0021_sample.txt"))));
+            
             timestamp = tmpJSON.timestamp;
             sensorCharacteristic = tmpJSON.sensorCharacteristic; 
             appartmentCharacteristic = tmpJSON.appartmentCharacteristic;
