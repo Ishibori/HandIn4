@@ -27,12 +27,20 @@ namespace GDEMDS
             //FLTimer.TickEvent += new TickTimer(LoadFiles);
             //FLTimer.StartTimer();
             
-            while (fileCounter <= 11803)
+            //while (fileCounter <= 11803)
+            //{
+            //    LoadFiles();
+            //    fileCounter++;
+            //}
+
+
+            var list = historicModelHandler.Load(new DateTime(2014, 11, 24, 16, 03, 00), new DateTime(2014, 11, 24, 16, 03, 15));
+            foreach (var data in list)
             {
-                LoadFiles();
-                fileCounter++;
+                Console.WriteLine(data);    
             }
             
+
             Console.ReadKey();
         }
 
