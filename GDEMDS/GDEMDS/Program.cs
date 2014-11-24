@@ -13,33 +13,39 @@ namespace GDEMDS
         const int LIMIT = 11803;
         
         public static ITickTimer FLTimer { get; set; }
-        public static int fileCounter = 0;
+        public static int fileCounter = 1;
         public static JsonDownloader jsonDown = new JsonDownloader();
+        public static CurrentModelHandler currentModelHandler = new CurrentModelHandler();
+        public static HistoricModelHandler historicModelHandler = new HistoricModelHandler();
 
         static void Main(string[] args)
         {
-            FLTimer = new FileLoadTimer(5000);
-            FLTimer.TickEvent += new TickTimer(LoadFiles);
-            FLTimer.StartTimer();
-            //var jsonDown = new JsonDownloader();
-            //Console.WriteLine(jsonDown.GetJson("http://userportal.iha.dk/~jrt/i4dab/E14/HandIn4/GFKRE0031_sample.txt"));
+            //var DBConfig = new JSONCharacteristics();
+            //DBConfig.LoadJSON();
 
-            //var JSONChar = new JSONCharacteristics();
-            //JSONChar.LoadJSON();
-
-
-
+            //FLTimer = new FileLoadTimer(1); // set to 5000;
+            //FLTimer.TickEvent += new TickTimer(LoadFiles);
+            //FLTimer.StartTimer();
+            
+            while (fileCounter <= 11803)
+            {
+                LoadFiles();
+                fileCounter++;
+            }
+            
             Console.ReadKey();
         }
 
         public static void LoadFiles()
         {
-            fileCounter++;
+            //fileCounter++;
             if (fileCounter <= 11803)
             {
                 Console.WriteLine("Downloaded file: " + fileCounter + ".json\n");
-                Console.WriteLine(jsonDown.GetJson("http://userportal.iha.dk/~jrt/i4dab/E14/HandIn4/dataGDL/data/"+fileCounter+".json"));
-
+                var JsonString = jsonDown.GetJson("http://userportal.iha.dk/~jrt/i4dab/E14/HandIn4/dataGDL/data/"+fileCounter+".json");
+                //Console.WriteLine(JsonString);
+                historicModelHandler.Save(JsonString);
+                currentModelHandler.Save(JsonString);
             }
             else
             {

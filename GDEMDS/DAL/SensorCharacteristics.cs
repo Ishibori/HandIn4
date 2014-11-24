@@ -8,7 +8,7 @@ namespace DAL
 {
     public class sensorCharacteristic
     {
-        public int Id { get; set; }
+        public int sensorId { get; set; }
         public string description { get; set; }
         public string unit { get; set; }
         public string externalRef { get; set; }
