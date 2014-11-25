@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,20 @@ namespace DAL
 {
     public class CurrentModelHandler
     {
+        public Sensor LoadSensorInformation(int sensorId)
+        {
+            var DataContext = new EntityContext();
+            return DataContext.Sensors.Find(sensorId);
+        }
+
+        public List<Measurement> LoadSensorMeasurements(int sensorId)
+        {
+            List<Measurement> resultList;
+            var DataContext = new EntityContext();
+            resultList = (DataContext.Measurements.Where(m => m.Sensor.SensorId == sensorId).Include(s => s.Sensor)).ToList();
+            return resultList;
+        }
+
         public void Save(string JsonToSave)
         {
             var DataContext = new EntityContext();

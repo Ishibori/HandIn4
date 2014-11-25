@@ -22,6 +22,8 @@ namespace DAL
         public DateTime CalibrationDate { get; set; }
         public string CalibrationEquation { get; set; }
         public string CalibrationCoeff { get; set; }
+        public string Unit { get; set; }
+        public string Description { get; set; }
     }
 
     public class Measurement

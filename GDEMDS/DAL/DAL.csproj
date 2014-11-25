@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201411241240022_FloorsRemoved.Designer.cs">
       <DependentUpon>201411241240022_FloorsRemoved.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201411251224168_unitAndDesciptionAddedToSensors.cs" />
+    <Compile Include="Migrations\201411251224168_unitAndDesciptionAddedToSensors.Designer.cs">
+      <DependentUpon>201411251224168_unitAndDesciptionAddedToSensors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Reading.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201411241240022_FloorsRemoved.resx">
       <DependentUpon>201411241240022_FloorsRemoved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411251224168_unitAndDesciptionAddedToSensors.resx">
+      <DependentUpon>201411251224168_unitAndDesciptionAddedToSensors.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

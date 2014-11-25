@@ -36,6 +36,8 @@ namespace DAL
                 tmpSensor.CalibrationDate = characteristic.calibrationDate;
                 tmpSensor.CalibrationEquation = characteristic.calibrationEquation;
                 tmpSensor.SensorId = characteristic.sensorId;
+                tmpSensor.Unit = characteristic.unit;
+                tmpSensor.Description = characteristic.description;
                 db.Sensors.AddOrUpdate(tmpSensor);
                 Console.WriteLine("SensorID: " + tmpSensor.SensorId);
             }
